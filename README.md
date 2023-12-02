@@ -1,8 +1,8 @@
 # distinct.nvim
 
-Distinct is neovim theme with distinct syntax solours. It is partially inspired by my previous theme - [gruv-vsassist.nvim](https://github.com/bartekprtc/gruv-vsassist.nvim).
+**Distinct** is neovim theme with **distinct** syntax solours. It is partially inspired by my previous theme - [gruv-vsassist.nvim](https://github.com/bartekprtc/gruv-vsassist.nvim).
 
-Distinct supports treesitter highlighting, as well as semantic token highlighting. It supports some major plugins, but not all of them (current list can be found at the end of README).
+**Distinct** supports treesitter highlighting, as well as semantic token highlighting. It supports some major plugins, but not all of them (current list can be found at the end of README). Fell free to add or request support for other plugins.
 
 ## Preview
 
@@ -14,7 +14,7 @@ Distinct supports treesitter highlighting, as well as semantic token highlightin
 
 ### Lazy
 
-If you don't want to change any settings, setup() needn't to be called. Defaults are presented below.
+If you don't want to change any settings, `setup()` needn't to be called. Defaults are presented below.
 
 ``` lua
 {
@@ -22,7 +22,7 @@ If you don't want to change any settings, setup() needn't to be called. Defaults
     priority = 1000,
     config = function()
         require("distinct").setup({
-            doc_comments_different_color = true, -- Use separate colour for documentation comments
+            doc_comments_different_color = true, -- Use different colour for documentation comments
         })
 
         vim.cmd [[colorscheme distinct]]
@@ -33,25 +33,23 @@ If you don't want to change any settings, setup() needn't to be called. Defaults
 ### Lualine
 
 ``` lua
-require("lualine").setup {
+require("lualine").setup({
     options = {
         -- ...
         theme = 'distinct'
         -- ...
-    }
-}
+    },
+})
 ```
 
 ### Barbecue
 
 ``` lua
-require("barbecue").setup {
-    options = {
-        -- ...
-        theme = 'distinct'
-        -- ...
-    }
-}
+require("barbecue").setup({
+    -- ...
+    theme = 'distinct'
+    -- ...
+})
 ```
 
 ## Supported plugins
