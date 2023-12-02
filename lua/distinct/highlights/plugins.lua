@@ -22,7 +22,7 @@ function M.get_highlights(theme)
         IblScope = { fg = theme.syntax.special },
 
         -- Lsp-signature
-        LspSignatureActiveParameter = { fg = theme.syntax.special, bold = true },
+        LspSignatureActiveParameter = { fg = theme.raw.red, bold = true },
 
         -- Mason
         MasonHeader = { fg = theme.raw.yellow },

@@ -122,7 +122,6 @@ function M.get_highlights(theme)
             sp = theme.diag.hint.fg,
         },
 
-        LspSignatureActiveParameter = { fg = theme.ui.select.search_bg, bold = true },
         LspCodeLens = { fg = theme.syntax.comment },
 
         LspInfoBorder = { fg = theme.fg_accented, bg = theme.ui.float.bg },
