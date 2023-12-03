@@ -1,6 +1,6 @@
 # distinct.nvim
 
-**Distinct** is neovim theme with **distinct** syntax solours. It is partially inspired by my previous theme - [gruv-vsassist.nvim](https://github.com/bartekprtc/gruv-vsassist.nvim).
+**Distinct** is neovim theme with distinctive, vibrant colours. It is partially inspired by my previous theme - [gruv-vsassist.nvim](https://github.com/bartekprtc/gruv-vsassist.nvim). It has a bit of gruvboxy tone to it.
 
 **Distinct** supports treesitter highlighting, as well as semantic token highlighting. It supports some major plugins, but not all of them (current list can be found at the end of README). Fell free to add or request support for other plugins.
 
