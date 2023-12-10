@@ -230,7 +230,7 @@ function M.get_highlights(theme)
         ["@text.environment.name"] = { fg = theme.syntax.global },
         ["@text.reference"] = { link = "Label" },
 
-        ["@text.literal"] = { bg = theme.ui.bg_very_dark, fg = theme.ui.fg_accented },
+        ["@text.literal"] = { bg = theme.ui.bg_light, fg = theme.ui.fg_accented },
         ["@text.literal.block"] = { link = "@text.literal" },
 
         ["@text.todo.checked"] = { fg = theme.diag.ok.fg },
