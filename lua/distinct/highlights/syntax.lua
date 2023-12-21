@@ -202,7 +202,7 @@ function M.get_highlights(theme)
 
         --- Identifiers
         ["@variable"] = { fg = theme.syntax.variable },       -- Any variable name that does not have another highlight.
-        ["@variable.builtin"] = { fg = theme.syntax.number }, -- Variable names that are defined by the languages, like `this` or `self`.
+        ["@variable.builtin"] = { fg = theme.syntax.builtin }, -- Variable names that are defined by the languages, like `this` or `self`.
         -- ["@constant"] = {},
         ["@constant.builtin"] = { fg = theme.syntax.number },
         -- ["@constant.macro"] = {},
