@@ -1,3 +1,7 @@
+# ❗This repository has been moved❗
+
+This colour scheme is now developed [here](https://gitlab.com/bartekjaszczak/distinct-nvim).
+
 # distinct.nvim
 
 **Distinct** is neovim colour scheme with distinctive, vibrant colours. It is partially inspired by my previous theme - [gruv-vsassist.nvim](https://github.com/bartekprtc/gruv-vsassist.nvim). It has a bit of gruvboxy tone to it.
