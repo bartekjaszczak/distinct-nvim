@@ -1,8 +1,4 @@
-# ❗This repository has been moved❗
-
-This colour scheme is now developed [here](https://gitlab.com/bartekjaszczak/distinct-nvim).
-
-# distinct.nvim
+# distinct-nvim
 
 **Distinct** is neovim colour scheme with distinctive, vibrant colours. It is partially inspired by my previous theme - [gruv-vsassist.nvim](https://github.com/bartekprtc/gruv-vsassist.nvim). It has a bit of gruvboxy tone to it.
 
@@ -22,7 +18,8 @@ If you don't want to change any settings, `setup()` needn't to be called. Defaul
 
 ``` lua
 {
-    "bartekprtc/distinct.nvim",
+    "https://gitlab.com/bartekjaszczak/distinct-nvim",
+
     priority = 1000,
     config = function()
         require("distinct").setup({
