@@ -80,7 +80,7 @@ function M.get_highlights(theme)
         -- NormalNC	Normal text in non-current windows.
         NormalNC = { link = "Normal" },
         -- Pmenu		Popup menu: Normal item.
-        Pmenu = { fg = theme.ui.fg, bg = theme.ui.bg_light },
+        Pmenu = { fg = theme.ui.fg, bg = theme.ui.bg_dark },
         -- PmenuSel	Popup menu: Selected item.
         PmenuSel = { fg = theme.ui.bg_dark, bg = theme.ui.select.selected_item },
         -- PmenuSbar	Popup menu: Scrollbar.
