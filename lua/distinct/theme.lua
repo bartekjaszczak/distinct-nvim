@@ -17,7 +17,7 @@ function M.get_theme(colors, settings)
             fg_title = colors.fg_accent,
 
             float = {
-                bg = colors.bg_light,
+                bg = colors.bg_dark,
                 border = colors.fg_light_accent,
                 title = colors.fg_accent,
                 fg = colors.fg,
