@@ -282,7 +282,7 @@ function M.get_highlights(theme)
         ["@lsp.typemod.variable.injected"] = { link = "@variable" },
         ["@lsp.typemod.variable.static"] = { fg = theme.syntax.static },
         ["@lsp.typemod.variable.globalScope"] = { fg = theme.syntax.global }, --(global variables)
-        ["@lsp.typemod.variable.readOnly"] = { fg = theme.syntax.constant },
+        -- ["@lsp.typemod.variable.readOnly"] = { fg = theme.syntax.constant },
     }
 end
 
