@@ -157,12 +157,12 @@ function M.get_highlights(theme)
         --- Literals
         -- ["@string"] = {},
         ["@string.documentation"] = { fg = theme.fg_light_accent },
-        ["@string.regex"] = { fg = theme.syntax.special },  -- For regexes.
-        ["@string.escape"] = { fg = theme.syntax.special }, -- For escape characters within a string.
+        ["@string.regex"] = { fg = theme.syntax.stringspecial },  -- For regexes.
+        ["@string.escape"] = { fg = theme.syntax.stringspecial }, -- For escape characters within a string.
         -- ["@string.special"] = {},
         -- ["@character"] = {},
         -- ["@character.special"] = {},
-        -- ["@boolean"] = {},
+        ["@boolean"] = { fg = theme.syntax.boolean },
         -- ["@number"] = {},
         -- ["@float"] = {},
 
@@ -190,7 +190,7 @@ function M.get_highlights(theme)
 
         --- Types
         -- ["@type"] = {},
-        -- ["@type.builtin"] = { link = "@keyword" },
+        ["@type.builtin"] = { fg = theme.syntax.type_builtin },
         -- ["@type.definition"] = {},
         ["@type.qualifier"] = { link = "@keyword" },
 
@@ -204,7 +204,7 @@ function M.get_highlights(theme)
         ["@variable"] = { fg = theme.syntax.variable },       -- Any variable name that does not have another highlight.
         ["@variable.builtin"] = { fg = theme.syntax.builtin }, -- Variable names that are defined by the languages, like `this` or `self`.
         -- ["@constant"] = {},
-        ["@constant.builtin"] = { fg = theme.syntax.number },
+        ["@constant.builtin"] = { link = "@constant" },
         -- ["@constant.macro"] = {},
 
         ["@namespace"] = { fg = theme.syntax.namespace },
@@ -254,7 +254,7 @@ function M.get_highlights(theme)
         ["@lsp.type.decorator"] = { link = "@attribute" },
         ["@lsp.type.deriveHelper"] = { link = "@attribute" },
         ["@lsp.type.enum"] = { link = "@type" },
-        ["@lsp.type.enumMember"] = { link = "@constant" },
+        ["@lsp.type.enumMember"] = { fg = theme.syntax.enummember },
         ["@lsp.type.escapeSequence"] = { link = "@string.escape" },
         ["@lsp.type.formatSpecifier"] = { link = "@punctuation.special" },
         ["@lsp.type.generic"] = { link = "@variable" },

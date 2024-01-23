@@ -26,15 +26,15 @@ function M.get_highlights(theme)
 
         -- Mason
         MasonHeader = { fg = theme.raw.yellow },
-        MasonHeaderSecondary = { fg = theme.raw.pink },
+        MasonHeaderSecondary = { fg = theme.raw.aqua },
         MasonHeading = { fg = theme.raw.orange },
 
         MasonHighlight = { fg = theme.raw.yellow },
         MasonHighlightBlock = { fg = theme.raw.yellow, bg = theme.ui.bg_light },
         MasonHighlightBlockBold = { fg = theme.raw.yellow, bg = theme.ui.bg_light, bold = true },
-        MasonHighlightBlockBoldSecondary = { fg = theme.raw.pink, bg = theme.ui.bg_light, bold = true },
-        MasonHighlightBlockSecondary = { fg = theme.raw.pink, bg = theme.ui.bg_light },
-        MasonHighlightSecondary = { fg = theme.raw.pink },
+        MasonHighlightBlockBoldSecondary = { fg = theme.raw.aqua, bg = theme.ui.bg_light, bold = true },
+        MasonHighlightBlockSecondary = { fg = theme.raw.aqua, bg = theme.ui.bg_light },
+        MasonHighlightSecondary = { fg = theme.raw.aqua },
 
         MasonMuted = { fg = theme.syntax.link },
         MasonMutedBlock = { fg = theme.syntax.link, bg = theme.ui.bg_light },
@@ -72,7 +72,7 @@ function M.get_highlights(theme)
         --
         NeoTreeFileName = { link = "NeoTreeNormal" },
         NeoTreeFileIcon = { link = "NeoTreeFileName" },
-        NeoTreeFileNameOpened = { fg = theme.raw.pink },
+        NeoTreeFileNameOpened = { fg = theme.raw.green },
         NeoTreeDimText = { fg = theme.ui.bg_light },
         NeoTreeMessage = { fg = theme.ui.bg_light, italic = true },
         -- NeoTreeFilterTerm = {},
@@ -315,7 +315,7 @@ function M.get_highlights(theme)
         ["@neorg.todo_items.done"] = { fg = theme.diag.ok.fg },
         ["@neorg.todo_items.on_hold"] = { fg = theme.raw.blue },
         ["@neorg.todo_items.pending"] = { fg = theme.raw.yellow },
-        ["@neorg.todo_items.recurring"] = { fg = theme.raw.lime },
+        ["@neorg.todo_items.recurring"] = { fg = theme.raw.aqua },
         ["@neorg.todo_items.uncertain"] = { fg = theme.raw.purple },
         ["@neorg.todo_items.undone"] = { fg = theme.diag.warn.fg },
         ["@neorg.todo_items.urgent"] = { fg = theme.diag.error.fg },
@@ -341,9 +341,9 @@ function M.get_highlights(theme)
 
         -- Todo-comments
         Todo = { link = "TodoBgTODO" },
-        TodoFgTODO = { fg = theme.raw.lime },
-        TodoBgTODO = { fg = theme.ui.bg_dark, bg = theme.raw.lime },
-        TodoSignTODO = { fg = theme.raw.lime, bg = theme.ui.bg_dark },
+        TodoFgTODO = { fg = theme.raw.green },
+        TodoBgTODO = { fg = theme.ui.bg_dark, bg = theme.raw.green },
+        TodoSignTODO = { fg = theme.raw.green, bg = theme.ui.bg_dark },
         TodoFgFIX = { fg = theme.raw.red },
         TodoBgFIX = { fg = theme.ui.bg_dark, bg = theme.raw.red },
         TodoSignFIX = { fg = theme.raw.red, bg = theme.ui.bg_dark },
@@ -369,15 +369,15 @@ function M.get_highlights(theme)
         -- TreesitterContextBottom = {},
 
         -- Undotree
-        UndotreeBranch = { fg = theme.raw_faded.lime },
+        UndotreeBranch = { fg = theme.raw_faded.green },
         UndotreeCurrent = { fg = theme.raw.red, bold = true },
         UndotreeFirstNode = { fg = theme.raw_faded.blue },
-        UndotreeHead = { fg = theme.raw.pink, bold = true },
+        UndotreeHead = { fg = theme.raw.aqua, bold = true },
         UndotreeHelp = { fg = theme.ui.fg_accented },
         UndotreeHelpKey = { fg = theme.diag.warn.fg },
         UndotreeHelpTitle = { fg = theme.diag.error.fg },
         UndotreeNext = { fg = theme.raw_faded.red },
-        UndotreeNode = { fg = theme.raw.lime },
+        UndotreeNode = { fg = theme.raw.green },
         UndotreeNodeCurrent = { fg = theme.raw.red, bold = true },
         UndotreeSavedBig = { fg = theme.diag.warn.fg, bold = true },
         UndotreeSavedSmall = { fg = theme.diag.warn.fg },

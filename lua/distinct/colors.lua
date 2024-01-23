@@ -12,43 +12,52 @@ local colors = {
     -- color bg (HSB xxx, xxx, 20)
     bg_red = "#330a05",
     bg_orange = "#331c05",
-    bg_lime = "#283305",
-    bg_blue = "#052433",
+    bg_green = "#053305",
+    bg_blue = "#051c33",
 
-    -- fg (HSB 50, xxx, 90)
-    fg = "#e6deb8", -- saturation 20
-    fg_light_accent = "#e6d68a", -- saturation 40
-    fg_accent = "#e6c72e", -- saturation 80
+    -- fg (HSB 50, xx, 90)
+    fg = "#e6e2cf", -- saturation 10
 
-    -- accent colors (HSB xxx, 90, 100)
-    purple = "#d919ff", -- hue 290
-    pink = "#ff198c", -- hue 330
+    -- main: 6, 30, 50
+    -- side: 120, 170, 210, 260 - Accented not used in syntax
+    -- additional: 235, 300 - Accented not used at all
+
+    -- main accent colours (HSB xxx, 90, 100)
     red = "#ff3019", -- hue 6
     orange = "#ff8c19", -- hue 30
-    yellow = "#ffdd19", -- hue 50, main accent
-    lime = "#c6ff19", -- hue 75
-    green = "#66ff19", -- hue 100
-    blue = "#19b2ff", -- hue 200
+    yellow = "#ffd919", -- hue 50, main accent
 
-    -- faded colors (HSB xxx, 60, 100)
-    purple_faded = "#e666ff", -- hue 290
-    pink_faded = "#ff66b3", -- hue 330
+    -- side accent colours (HSB xxx, 90, 100)
+    green = "#19ff19", -- hue 120
+    aqua = "#19ffd9", -- hue 170
+    blue = "#198cff", -- hue 210
+    purple = "#6619ff", -- hue 260
+
+    -- additional accent colours (HSB xxx, 90, 100) - not used
+    -- darkblue = "#192dff", -- hue 235
+    -- pink = "#ff19ff", -- hue 300
+
+    -- faded colours (HSB xxx, 60, 100)
     red_faded = "#ff7566", -- hue 6
     orange_faded = "#ffb366", -- hue 30
     yellow_faded = "#ffe666", -- hue 50, main accent
-    lime_faded = "#d9ff66", -- hue 75
-    green_faded = "#99ff66", -- hue 100
-    blue_faded = "#66ccff", -- hue 200
+    green_faded = "#66ff66", -- hue 120
+    aqua_faded = "#66ffe5", -- hue 170
+    blue_faded = "#66b3ff", -- hue 210
+    darkblue_faded = "#6673ff", -- hue 235
+    purple_faded = "#9966ff", -- hue 260
+    pink_faded = "#ff66ff", -- hue 300
 
-    -- pale colors (HSB xxx, 30, 100)
-    purple_pale = "#f2b3ff", -- hue 290
-    pink_pale = "#ffb3d9", -- hue 330
+    -- pale colours (HSB xxx, 30, 100)
     red_pale = "#ffbab3", -- hue 6
     orange_pale = "#ffd9b3", -- hue 30
     yellow_pale = "#fff2b3", -- hue 50, main accent
-    lime_pale = "#ecffb3", -- hue 75
-    green_pale = "#ccffb3", -- hue 100
-    blue_pale = "#b3e5ff", -- hue 200
+    green_pale = "#b3ffb3", -- hue 120
+    aqua_pale = "#b3fff2", -- hue 170
+    blue_pale = "#b3d9ff", -- hue 210
+    darkblue_pale = "#b3b9ff", -- hue 235
+    purple_pale = "#ccb3ff", -- hue 260
+    pink_pale = "#ffb3ff", -- hue 300
 
     -- comments
     yellow_comment = "#665e33", -- brightness 40, hue 50, saturation 40
