@@ -1,15 +1,13 @@
 # distinct-nvim
 
-**Distinct** is neovim colour scheme with distinctive, vibrant colours. It is partially inspired by my previous theme - [gruv-vsassist.nvim](https://github.com/bartekprtc/gruv-vsassist.nvim). It has a bit of gruvboxy tone to it.
+**Distinct** is neovim colour scheme with distinctive, vibrant colours. It is partially inspired by my previous theme - [gruv-vsassist.nvim](https://github.com/bartekprtc/gruv-vsassist.nvim). Colour palette is based on Pol'and'Rock festival logo.
 
 **Distinct** supports treesitter highlighting, as well as semantic token highlighting. It supports some major plugins, but not all of them (current list can be found at the end of README). Fell free to add or request support for other plugins. It's entirely written in lua, therefore it's not suitable for vim.
 
 ## Preview
 
-![showcase1](showcase/showcase_1.png?)
-![showcase2](showcase/showcase_2.png?)
-![showcase3](showcase/showcase_3.png?)
 
+![showcase1](showcase/showcase_1.png?)
 ## Usage
 
 ### Lazy

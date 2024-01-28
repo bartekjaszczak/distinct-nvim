@@ -7,7 +7,7 @@ function M.get_highlights(theme)
         Yellow = { fg = theme.raw.yellow },
         Red = { fg = theme.raw.red },
         Green = { fg = theme.raw.green },
-        Brown = { fg = theme.raw.orange }, -- Hehe
+        Brown = { fg = theme.raw.dark_orange }, -- Hehe
 
         Comment = { fg = theme.syntax.comment, italic = true }, -- (preferred) any constant
         Constant = { fg = theme.syntax.constant },              -- (preferred) any constant
@@ -60,6 +60,10 @@ function M.get_highlights(theme)
 
         htmlH1 = { fg = theme.syntax.h1, bold = true },
         htmlH2 = { fg = theme.syntax.h2, bold = true },
+        htmlH3 = { fg = theme.syntax.h3, bold = true },
+        htmlH4 = { fg = theme.syntax.h4, bold = true },
+        htmlH5 = { fg = theme.syntax.h5, bold = true },
+        htmlH6 = { fg = theme.syntax.h6, bold = true },
 
         -- mkdHeading = {},
         -- mkdCode = {},
@@ -73,6 +77,10 @@ function M.get_highlights(theme)
         markdownCodeBlock = { fg = theme.ui.fg_accented },
         markdownH1 = { fg = theme.syntax.h1, bold = true },
         markdownH2 = { fg = theme.syntax.h2, bold = true },
+        markdownH3 = { fg = theme.syntax.h3, bold = true },
+        markdownH4 = { fg = theme.syntax.h4, bold = true },
+        markdownH5 = { fg = theme.syntax.h5, bold = true },
+        markdownH6 = { fg = theme.syntax.h6, bold = true },
         markdownLinkText = { fg = theme.syntax.link, underline = true },
 
         -- ["helpCommand"] = {},
@@ -182,7 +190,7 @@ function M.get_highlights(theme)
         -- ["@keyword.function"] = {},
         -- ["@keyword.operator"] = {},
         -- ["@keyword.return"] = {},
-        -- ["@repeat"] = {},
+        ["@keyword.repeat"] = { fg = theme.syntax.keyword_loops },
         -- ["@debug"] = {},
         ["@label"] = { link = "Label" }, -- For labels: `label:` in C and `:label:` in Lua.
         ["@include"] = { link = "@keyword" },
@@ -195,7 +203,7 @@ function M.get_highlights(theme)
         ["@type.qualifier"] = { link = "@keyword" },
 
         -- ["@storageclass"] = {},
-        ["@attribute"] = { link = "Function" },
+        ["@attribute"] = { fg = theme.syntax.attribute },
         ["@field"] = { fg = theme.syntax.field }, -- For fields.
         ["@property"] = { link = "@field" },
         ["@annotation"] = { link = "Function" },
@@ -208,6 +216,7 @@ function M.get_highlights(theme)
         -- ["@constant.macro"] = {},
 
         ["@namespace"] = { fg = theme.syntax.namespace },
+        ["@module"] = { fg = theme.syntax.module },
         ["@symbol"] = { fg = theme.syntax.func },
 
         --- Text
@@ -244,7 +253,7 @@ function M.get_highlights(theme)
 
         --- Tags
         ["@tag"] = { fg = theme.syntax.statement },
-        ["@tag.attribute"] = { fg = theme.syntax.func },
+        ["@tag.attribute"] = { fg = theme.syntax.attribute },
         ["@tag.delimiter"] = { fg = theme.syntax.delimiter },
 
         -- LSP Semantic Token Groups
