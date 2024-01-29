@@ -176,6 +176,7 @@ function M.get_highlights(theme)
         ["@string.escape"] = { fg = theme.syntax.stringspecial }, -- For escape characters within a string.
         ["@escape"] = { link = "@string.escape" },
         -- ["@string.special"] = {},
+        ["@string.special.url"] = { link = "@markup.link"},
         -- ["@character"] = {},
         -- ["@character.special"] = {},
         ["@boolean"] = { fg = theme.syntax.boolean },
@@ -189,6 +190,8 @@ function M.get_highlights(theme)
         -- ["@function.macro"] = {},
         ["@method"] = { fg = theme.syntax.method }, -- For builtin parameters of a function, e.g. "..." or Smali's p[1-99]
         -- ["@method.call"] = {},
+        ["@function.method"] = { fg = theme.syntax.method },
+        ["@function.method.call"] = {},
         ["@constructor"] = { fg = theme.syntax.method }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
         -- ["@constructor.builtin"] = {},
 
@@ -198,6 +201,8 @@ function M.get_highlights(theme)
         -- ["@keyword.function"] = {},
         -- ["@keyword.operator"] = {},
         -- ["@keyword.return"] = {},
+        -- ["@keyword.storage"] = {},
+        -- ["@keyword.directive"] = {},
         ["@keyword.storage"] = { link = "StorageClass" },
         ["@keyword.repeat"] = { fg = theme.syntax.keyword_loops },
         -- ["@debug"] = {},
@@ -211,7 +216,6 @@ function M.get_highlights(theme)
         -- ["@type.definition"] = {},
         ["@type.qualifier"] = { link = "@keyword" },
 
-        -- ["@storageclass"] = {},
         ["@attribute"] = { link = "Function" },
         ["@field"] = { fg = theme.syntax.field }, -- For fields.
         ["@property"] = { link = "@field" },
@@ -301,6 +305,16 @@ function M.get_highlights(theme)
         ["@markup.raw.block"] = { link = "@markup.raw" },
         ["@markup.raw.inline"] = { link = "@markup.raw" },
         ["@markup.math"] = { fg = theme.syntax.number },
+
+        ["@comment.todo.checked"] = { fg = theme.diag.ok.fg },
+        ["@comment.todo.unchecked"] = { fg = theme.diag.warn.fg },
+        ["@comment.note"] = { fg = theme.diag.hint.fg },
+        ["@comment.warning"] = { fg = theme.diag.warn.fg },
+        ["@comment.danger"] = { fg = theme.diag.error.fg },
+
+        ["@diff.plus"] = { link = "DiffAdd" },
+        ["@diff.minus"] = { link = "DiffDelete" },
+        ["@diff.delta"] = { link = "DiffChange" },
 
         --- Tags
         ["@tag"] = { fg = theme.syntax.tag },
