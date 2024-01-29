@@ -86,7 +86,6 @@ function M.get_theme(colors, settings)
 
             func = colors.main.light_orange,
             method = colors.main.dark_orange,
-            attribute = colors.main.purple,
 
             statement = colors.main.red,
             keyword = colors.main.red,
@@ -111,6 +110,8 @@ function M.get_theme(colors, settings)
             namespace = colors.faded.turquoise,
             module = colors.faded.turquoise,
             builtin = colors.faded.purple,
+            tag = colors.main.dark_orange,
+            attribute = colors.main.light_orange,
 
             h1 = colors.main.yellow,
             h2 = colors.main.light_orange,
@@ -118,7 +119,7 @@ function M.get_theme(colors, settings)
             h4 = colors.main.red,
             h5 = colors.main.pink,
             h6 = colors.main.purple,
-            link = colors.fg.normal,
+            link = colors.faded.blue,
         },
 
         raw = {

@@ -69,4 +69,5 @@ require("barbecue").setup({
 - [todo-comments.nvim](https://github.com/folke/todo-comments.nvim)
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [nvim-treesitter-context](https://github.com/nvim-treesitter/nvim-treesitter-context)
+- [rainbow-delimiters.nvim](https://gitlab.com/HiPhish/rainbow-delimiters.nvim)
 - [undotree](https://github.com/mbbill/undotree)

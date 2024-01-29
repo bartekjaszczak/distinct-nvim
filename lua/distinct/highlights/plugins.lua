@@ -323,6 +323,15 @@ function M.get_highlights(theme)
         -- Nvim-surround
         -- NvimSurroundHighlight = { link = "Visual" },
 
+        -- Rainbow-Delimiters
+        RainbowDelimiterRed = { fg = theme.raw.red },
+        RainbowDelimiterOrange = { fg = theme.raw.light_orange },
+        RainbowDelimiterYellow = { fg = theme.raw.yellow },
+        RainbowDelimiterGreen = { fg = theme.raw.light_green },
+        RainbowDelimiterBlue = { fg = theme.raw.blue },
+        RainbowDelimiterViolet = { fg = theme.raw.pink },
+        RainbowDelimiterCyan = { fg = theme.raw.turquoise },
+
         -- Symbols-outline
         FocusedSymbol = { fg = theme.diag.info.fg, bg = theme.diag.info.bg },
         SymbolsOutlineConnector = { fg = theme.ui.fg_accented },
