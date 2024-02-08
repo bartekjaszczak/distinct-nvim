@@ -7,7 +7,7 @@
 ## Preview
 
 
-![showcase1](showcase/showcase_1.png?)
+![cpp](showcase/cpp/showcase.png?)
 ## Usage
 
 ### Lazy

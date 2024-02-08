@@ -89,7 +89,8 @@ function M.get_theme(colors, settings)
 
             statement = colors.main.red,
             keyword = colors.main.red,
-            keyword_loops = colors.main.red,
+            keyword_loops = colors.main.pink,
+            keyword_flow = colors.main.pink,
             operator = colors.fg.normal,
 
             preproc = colors.main.blue,
