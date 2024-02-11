@@ -213,7 +213,7 @@ function M.get_highlights(theme)
 
         --- Types
         -- ["@type"] = {},
-        ["@type.builtin"] = { fg = theme.syntax.type_builtin },
+        ["@type.builtin"] = { fg = theme.syntax.type_builtin, bold = true },
         -- ["@type.definition"] = {},
         ["@type.qualifier"] = { link = "@keyword" },
 
