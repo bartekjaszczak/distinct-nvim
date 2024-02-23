@@ -7,34 +7,34 @@ function M.get_highlights(theme)
         Yellow = { fg = theme.raw.yellow },
         Red = { fg = theme.raw.red },
         Green = { fg = theme.raw.green },
-        Brown = { fg = theme.raw.dark_orange }, -- Hehe
+        Brown = { fg = theme.raw.dark_orange },                 -- Hehe
 
         Comment = { fg = theme.syntax.comment, italic = true }, -- (preferred) any constant
-        Constant = { fg = theme.syntax.constant }, -- (preferred) any constant
-        String = { fg = theme.syntax.string }, --   a string constant: "this is a string"
-        Character = { fg = theme.syntax.char }, --  a character constant: 'c', '\n'
-        Number = { fg = theme.syntax.number }, --   a number constant: 234, 0xff
-        Boolean = { fg = theme.syntax.number }, --  a boolean constant: TRUE, false
-        Float = { fg = theme.syntax.number }, --    a floating point constant: 2.3e10
+        Constant = { fg = theme.syntax.constant },              -- (preferred) any constant
+        String = { fg = theme.syntax.string },                  --   a string constant: "this is a string"
+        Character = { fg = theme.syntax.char },                 --  a character constant: 'c', '\n'
+        Number = { fg = theme.syntax.number },                  --   a number constant: 234, 0xff
+        Boolean = { fg = theme.syntax.number },                 --  a boolean constant: TRUE, false
+        Float = { fg = theme.syntax.number },                   --    a floating point constant: 2.3e10
 
-        Identifier = { fg = theme.syntax.variable }, -- (preferred) any variable name
-        Function = { fg = theme.syntax.func }, -- function name (also: methods for classes)
+        Identifier = { fg = theme.syntax.variable },            -- (preferred) any variable name
+        Function = { fg = theme.syntax.func },                  -- function name (also: methods for classes)
 
-        Statement = { fg = theme.syntax.statement }, -- (preferred) any statement
+        Statement = { fg = theme.syntax.statement },            -- (preferred) any statement
         -- Conditional   = { }, --  if, then, else, endif, switch, etc.
         -- Repeat        = { }, --   for, do, while, etc.
-        Label = { fg = theme.syntax.label }, --    case, default, etc.
+        Label = { fg = theme.syntax.label },       --    case, default, etc.
         Operator = { fg = theme.syntax.operator }, -- "sizeof", "+", "*", etc.
-        Keyword = { fg = theme.syntax.keyword }, --  any other keyword
+        Keyword = { fg = theme.syntax.keyword },   --  any other keyword
         -- Exception     = { }, --  try, catch, throw
-        PreProc = { fg = theme.syntax.keyword }, -- (preferred) generic Preprocessor
+        PreProc = { fg = theme.syntax.keyword },   -- (preferred) generic Preprocessor
         -- Include       = { }, --  preprocessor #include
         -- Define        = {}, --   preprocessor #define
         Macro = { fg = theme.syntax.preproc }, --    same as Define
         -- PreCondit     = { }, --  preprocessor #if, #else, #endif, etc.
 
         Type = { fg = theme.syntax.type, bold = true }, -- (preferred) int, long, char, etc.
-        StorageClass = { fg = theme.syntax.keyword }, -- static, register, volatile, etc.
+        StorageClass = { fg = theme.syntax.keyword },   -- static, register, volatile, etc.
         -- Structure     = { }, --  struct, union, enum, etc.
         -- Typedef       = { }, --  A typedef
 
@@ -45,7 +45,7 @@ function M.get_highlights(theme)
         -- SpecialComment= { }, -- special things inside a comment
         Debug = { fg = theme.syntax.debug }, --    debugging statements
 
-        Underlined = { underline = true }, -- (preferred) text that stands out, HTML links
+        Underlined = { underline = true },   -- (preferred) text that stands out, HTML links
         Bold = { bold = true },
         Italic = { italic = true },
 
@@ -166,13 +166,13 @@ function M.get_highlights(theme)
 
         --- Punctuation
         ["@punctuation.delimiter"] = { fg = theme.syntax.delimiter }, -- For delimiters ie: `.`
-        ["@punctuation.bracket"] = { fg = theme.syntax.bracket }, -- For brackets and parens.
-        ["@punctuation.special"] = { fg = theme.syntax.special }, -- For special punctutation that does not fall in the catagories before.
+        ["@punctuation.bracket"] = { fg = theme.syntax.bracket },     -- For brackets and parens.
+        ["@punctuation.special"] = { fg = theme.syntax.special },     -- For special punctutation that does not fall in the catagories before.
 
         --- Literals
         -- ["@string"] = {},
         ["@string.documentation"] = { fg = theme.fg_light_accent },
-        ["@string.regex"] = { fg = theme.syntax.stringspecial }, -- For regexes.
+        ["@string.regex"] = { fg = theme.syntax.stringspecial },  -- For regexes.
         ["@string.escape"] = { fg = theme.syntax.stringspecial }, -- For escape characters within a string.
         ["@escape"] = { link = "@string.escape" },
         -- ["@string.special"] = {},
@@ -223,9 +223,9 @@ function M.get_highlights(theme)
         ["@annotation"] = { link = "Function" },
 
         --- Identifiers
-        ["@variable"] = { fg = theme.syntax.variable }, -- Any variable name that does not have another highlight.
+        ["@variable"] = { fg = theme.syntax.variable },        -- Any variable name that does not have another highlight.
         ["@variable.builtin"] = { fg = theme.syntax.builtin }, -- Variable names that are defined by the languages, like `this` or `self`.
-        ["@parameter"] = { fg = theme.syntax.param }, -- For parameters of a function.
+        ["@parameter"] = { fg = theme.syntax.param },          -- For parameters of a function.
         ["@variable.parameter"] = { link = "@parameter" },
         -- ["@variable.parameter.builtin"] = {},
         -- ["@constant"] = {},
@@ -359,6 +359,7 @@ function M.get_highlights(theme)
         ["@lsp.typemod.variable.static"] = { fg = theme.syntax.static },
         ["@lsp.typemod.variable.globalScope"] = { fg = theme.syntax.global }, --(global variables)
         -- ["@lsp.typemod.variable.readOnly"] = { fg = theme.syntax.constant },
+        ["@lsp.mod.mutable"] = { link = "Underlined" },
 
         -- Other (TODO?)
         -- ["@embedded"] = {},
