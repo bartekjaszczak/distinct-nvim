@@ -53,7 +53,7 @@ function M.get_highlights(theme)
         -- Ignore = { }, -- (preferred) left blank, hidden  |hl-Ignore|
 
         Error = { fg = theme.syntax.error }, -- (preferred) any erroneous construct
-        Todo = { bg = theme.syntax.todo, fg = theme.ui.bg_dark }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
+        -- Todo = { bg = theme.syntax.todo, fg = theme.ui.bg_dark }, -- (preferred) anything that needs extra attention; mostly the keywords TODO FIXME and XXX
 
         qfLineNr = { fg = theme.ui.fg_accented },
         qfFileName = { fg = theme.ui.fg },
@@ -349,6 +349,7 @@ function M.get_highlights(theme)
         ["@lsp.type.unresolvedReference"] = { undercurl = true, sp = theme.diag.error.fg },
         ["@lsp.type.variable"] = { link = "@variable" }, -- use treesitter styles for regular variables
         ["@lsp.typemod.class.constructorOrDestructor"] = { link = "@constructor" },
+        ["@lsp.typemod.comment.documentation"] = { link = "@comment.documentation" },
         ["@lsp.typemod.keyword.async"] = { link = "@keyword.coroutine" },
         ["@lsp.typemod.keyword.injected"] = { link = "@keyword" },
         ["@lsp.typemod.operator.injected"] = { link = "@operator" },

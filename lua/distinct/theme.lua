@@ -108,8 +108,8 @@ function M.get_theme(colors, settings)
             delimiter = colors.fg.normal,
 
             label = colors.main.green,
-            namespace = colors.faded.turquoise,
-            module = colors.faded.turquoise,
+            namespace = colors.fg.dim.light_orange,
+            module = colors.fg.dim.light_orange,
             builtin = colors.faded.purple,
             tag = colors.main.dark_orange,
             attribute = colors.main.light_orange,
