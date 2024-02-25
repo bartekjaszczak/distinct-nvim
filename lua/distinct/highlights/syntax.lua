@@ -205,7 +205,7 @@ function M.get_highlights(theme)
         -- ["@keyword.storage"] = {},
         -- ["@keyword.directive"] = {},
         ["@keyword.storage"] = { link = "StorageClass" },
-        ["@keyword.repeat"] = { fg = theme.syntax.keyword_loops },
+        ["@keyword.repeat"] = { fg = theme.syntax.keyword_flow },
         -- ["@debug"] = {},
         ["@label"] = { link = "Label" }, -- For labels: `label:` in C and `:label:` in Lua.
         ["@include"] = { link = "@keyword" },
@@ -352,6 +352,7 @@ function M.get_highlights(theme)
         ["@lsp.typemod.comment.documentation"] = { link = "@comment.documentation" },
         ["@lsp.typemod.keyword.async"] = { link = "@keyword.coroutine" },
         ["@lsp.typemod.keyword.injected"] = { link = "@keyword" },
+        ["@lsp.typemod.keyword.controlFlow"] = { link = "@keyword.conditional" },
         ["@lsp.typemod.operator.injected"] = { link = "@operator" },
         ["@lsp.typemod.string.injected"] = { link = "@string" },
         ["@lsp.typemod.variable.callable"] = { link = "@function" },
