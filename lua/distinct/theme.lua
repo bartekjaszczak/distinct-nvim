@@ -78,7 +78,7 @@ function M.get_theme(colors, settings)
             number = colors.faded.pink,
             boolean = colors.faded.pink,
 
-            variable = colors.faded.yellow,
+            variable = colors.fg.normal,
             param = colors.faded.green,
             field = colors.faded.blue,
             global = colors.faded.red,
@@ -90,7 +90,7 @@ function M.get_theme(colors, settings)
             statement = colors.main.red,
             keyword = colors.main.red,
             keyword_flow = colors.main.pink,
-            operator = colors.fg.normal,
+            operator = colors.main.red,
 
             preproc = colors.main.blue,
 
@@ -107,8 +107,8 @@ function M.get_theme(colors, settings)
             delimiter = colors.fg.normal,
 
             label = colors.main.green,
-            namespace = colors.fg.dim.light_orange,
-            module = colors.fg.dim.light_orange,
+            namespace = colors.faded.yellow,
+            module = colors.faded.yellow,
             builtin = colors.faded.purple,
             tag = colors.main.dark_orange,
             attribute = colors.main.light_orange,
