@@ -48,7 +48,7 @@ function M.get_highlights(theme)
         Underlined = { underline = true },   -- (preferred) text that stands out, HTML links
         Bold = { bold = true },
         Italic = { italic = true },
-        Italic = { italic = true },
+        Strikethrough = { italic = true },
 
         -- ("Ignore", below, may be invisible...)
         -- Ignore = { }, -- (preferred) left blank, hidden  |hl-Ignore|
@@ -188,7 +188,7 @@ function M.get_highlights(theme)
         -- ["@function"] = {},
         ["@function.builtin"] = { link = "@function" },
         -- ["@function.call"] = {},
-        ["@function.macro"] = { link = "@macro" },
+        ["@function.macro"] = { link = "Macro" },
         ["@method"] = { fg = theme.syntax.method }, -- For builtin parameters of a function, e.g. "..." or Smali's p[1-99]
         -- ["@method.call"] = {},
         ["@function.method"] = { fg = theme.syntax.method },
@@ -213,7 +213,7 @@ function M.get_highlights(theme)
         -- ["@exception"] = {},
 
         --- Types
-        -- ["@type"] = {},
+        ["@type"] = { link = "Type" },
         ["@type.builtin"] = { fg = theme.syntax.type_builtin, bold = true },
         -- ["@type.definition"] = {},
         ["@type.qualifier"] = { link = "@keyword" },
@@ -342,7 +342,7 @@ function M.get_highlights(theme)
         ["@lsp.type.keyword"] = { link = "@keyword" },
         ["@lsp.type.label"] = { link = "@label" },
         ["@lsp.type.lifetime"] = { link = "@storageclass" },
-        ["@lsp.type.macro"] = { link = "@macro" },
+        ["@lsp.type.macro"] = { link = "Macro" },
         ["@lsp.type.method"] = { link = "@method" },
         ["@lsp.type.namespace"] = { link = "@namespace" },
         ["@lsp.type.number"] = { link = "@number" },
@@ -356,7 +356,7 @@ function M.get_highlights(theme)
         ["@lsp.type.struct"] = { link = "@type" },
         ["@lsp.type.type"] = { link = "@type" },
         ["@lsp.type.typeAlias"] = { link = "@type.definition" },
-        ["@lsp.type.typeParameter"] = { link = "@class" },
+        ["@lsp.type.typeParameter"] = { link = "@type" },
         ["@lsp.type.unresolvedReference"] = { undercurl = true, sp = theme.diag.error.fg },
         ["@lsp.type.variable"] = { link = "@variable" }, -- use treesitter styles for regular variables
         ["@lsp.typemod.class.constructorOrDestructor"] = { link = "@constructor" },
