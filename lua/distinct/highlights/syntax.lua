@@ -188,7 +188,7 @@ function M.get_highlights(theme)
         -- ["@function"] = {},
         ["@function.builtin"] = { link = "@function" },
         -- ["@function.call"] = {},
-        -- ["@function.macro"] = {},
+        ["@function.macro"] = { link = "@macro" },
         ["@method"] = { fg = theme.syntax.method }, -- For builtin parameters of a function, e.g. "..." or Smali's p[1-99]
         -- ["@method.call"] = {},
         ["@function.method"] = { fg = theme.syntax.method },
