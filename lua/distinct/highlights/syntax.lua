@@ -48,6 +48,7 @@ function M.get_highlights(theme)
         Underlined = { underline = true },   -- (preferred) text that stands out, HTML links
         Bold = { bold = true },
         Italic = { italic = true },
+        Italic = { italic = true },
 
         -- ("Ignore", below, may be invisible...)
         -- Ignore = { }, -- (preferred) left blank, hidden  |hl-Ignore|
@@ -323,29 +324,39 @@ function M.get_highlights(theme)
         ["@tag.delimiter"] = { fg = theme.syntax.delimiter },
 
         -- LSP Semantic Token Groups
+        -- Reference: https://code.visualstudio.com/api/language-extensions/semantic-highlight-guide
         ["@lsp.type.boolean"] = { link = "@boolean" },
         ["@lsp.type.builtinType"] = { link = "@type.builtin" },
+        ["@lsp.type.class"] = { link = "@type" },
         ["@lsp.type.comment"] = { link = "@comment" },
         ["@lsp.type.decorator"] = { link = "@attribute" },
         ["@lsp.type.deriveHelper"] = { link = "@attribute" },
         ["@lsp.type.enum"] = { link = "@type" },
         ["@lsp.type.enumMember"] = { fg = theme.syntax.enummember },
+        ["@lsp.type.event"] = { link = "@function" },
         ["@lsp.type.escapeSequence"] = { link = "@string.escape" },
         ["@lsp.type.formatSpecifier"] = { link = "@punctuation.special" },
+        ["@lsp.type.function"] = { link = "@function" },
         ["@lsp.type.generic"] = { link = "@variable" },
         ["@lsp.type.interface"] = { link = "@type" },
         ["@lsp.type.keyword"] = { link = "@keyword" },
+        ["@lsp.type.label"] = { link = "@label" },
         ["@lsp.type.lifetime"] = { link = "@storageclass" },
+        ["@lsp.type.macro"] = { link = "@macro" },
         ["@lsp.type.method"] = { link = "@method" },
         ["@lsp.type.namespace"] = { link = "@namespace" },
         ["@lsp.type.number"] = { link = "@number" },
         ["@lsp.type.operator"] = { link = "@operator" },
         ["@lsp.type.parameter"] = { link = "@parameter" },
         ["@lsp.type.property"] = { link = "@property" },
+        ["@lsp.type.regexp"] = { link = "@punctuation.special" },
         ["@lsp.type.selfKeyword"] = { link = "@variable.builtin" },
         ["@lsp.type.selfTypeKeyword"] = { link = "@variable.builtin" },
         ["@lsp.type.string"] = { link = "@string" },
+        ["@lsp.type.struct"] = { link = "@type" },
+        ["@lsp.type.type"] = { link = "@type" },
         ["@lsp.type.typeAlias"] = { link = "@type.definition" },
+        ["@lsp.type.typeParameter"] = { link = "@class" },
         ["@lsp.type.unresolvedReference"] = { undercurl = true, sp = theme.diag.error.fg },
         ["@lsp.type.variable"] = { link = "@variable" }, -- use treesitter styles for regular variables
         ["@lsp.typemod.class.constructorOrDestructor"] = { link = "@constructor" },
@@ -361,6 +372,16 @@ function M.get_highlights(theme)
         ["@lsp.typemod.variable.globalScope"] = { fg = theme.syntax.global }, --(global variables)
         -- ["@lsp.typemod.variable.readOnly"] = { fg = theme.syntax.constant },
         ["@lsp.mod.mutable"] = { link = "Underlined" },
+        -- ["@lsp.mod.declaration"] = { },
+        -- ["@lsp.mod.definition"] = { },
+        -- ["@lsp.mod.readonly"] = { },
+        -- ["@lsp.mod.static"] = { },
+        ["@lsp.mod.deprecated"] = { strikethrough = true },
+        ["@lsp.mod.abstract"] = { italic = true },
+        -- ["@lsp.mod.async"] = { },
+        -- ["@lsp.mod.modification"] = { },
+        -- ["@lsp.mod.documentation"] = { },
+        -- ["@lsp.mod.defaultLibrary"] = { },
 
         -- Other (TODO?)
         -- ["@embedded"] = {},
