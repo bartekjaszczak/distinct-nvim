@@ -156,172 +156,122 @@ function M.get_highlights(theme)
 
         dosIniLabel = { link = "@property" },
 
-        -- Misc
-        -- ["@comment"] = { link = "Comment" },
-        ["@comment.documentation"] = { fg = theme.syntax.comment_special },
-        ["@error"] = { link = "Error" },
-        -- ["@none"] = {},
-        -- ["@preproc"] = {},
-        -- ["@define"] = {},
-        ["@operator"] = { fg = theme.syntax.operator }, -- For any operator: `+`, but also `->` and `*` in C.
+        -- Treesitter groups
+        ["@variable"] = { fg = theme.syntax.variable },        -- Any variable name that does not have another highlight.
+        ["@variable.builtin"] = { fg = theme.syntax.builtin }, -- Variable names that are defined by the languages, like `this` or `self`.
+        ["@variable.parameter"] = { fg = theme.syntax.param },
+        -- ["@variable.parameter.builtin"] = {},
+        ["@variable.member"] = { fg = theme.syntax.field },
 
-        --- Punctuation
-        ["@punctuation.delimiter"] = { fg = theme.syntax.delimiter }, -- For delimiters ie: `.`
-        ["@punctuation.bracket"] = { fg = theme.syntax.bracket },     -- For brackets and parens.
-        ["@punctuation.special"] = { fg = theme.syntax.special },     -- For special punctutation that does not fall in the catagories before.
+        ["@constant"] = { fg = theme.syntax.constant },
+        ["@constant.builtin"] = { link = "@constant" },
+        -- ["@constant.macro"] = {},
 
-        --- Literals
+        ["@module"] = { fg = theme.syntax.module },
+        -- ["@module.builtin"] = {},
+        ["@label"] = { link = "Label" }, -- For labels: `label:` in C and `:label:` in Lua.
+
         -- ["@string"] = {},
         ["@string.documentation"] = { fg = theme.fg_light_accent },
-        ["@string.regex"] = { fg = theme.syntax.stringspecial },  -- For regexes.
+        ["@string.regexp"] = { fg = theme.syntax.stringspecial },  -- For regexes.
         ["@string.escape"] = { fg = theme.syntax.stringspecial }, -- For escape characters within a string.
-        ["@escape"] = { link = "@string.escape" },
-        -- ["@string.special"] = {},
+        ["@string.special"] = { fg = theme.syntax.stringspecial },
+        -- ["@string.special.symbol"] = {},
         ["@string.special.url"] = { link = "@markup.link" },
+        ["@string.special.path"] = { link = "@markup.link" },
+
         -- ["@character"] = {},
         -- ["@character.special"] = {},
+
         ["@boolean"] = { fg = theme.syntax.boolean },
         -- ["@number"] = {},
-        -- ["@float"] = {},
+        -- ["@number.float"] = {},
 
-        --- Functions
+        ["@type"] = { link = "Type" },
+        ["@type.builtin"] = { fg = theme.syntax.type_builtin, bold = true },
+        -- ["@type.definition"] = {},
+
+        ["@attribute"] = { link = "Function" },
+        -- ["@attribute.builtin"] = {},
+        ["@property"] = { link = "@variable.member" },
+
         -- ["@function"] = {},
         ["@function.builtin"] = { link = "@function" },
         -- ["@function.call"] = {},
         ["@function.macro"] = { link = "Macro" },
-        ["@method"] = { fg = theme.syntax.method }, -- For builtin parameters of a function, e.g. "..." or Smali's p[1-99]
-        -- ["@method.call"] = {},
+
         ["@function.method"] = { fg = theme.syntax.method },
         ["@function.method.call"] = {},
-        ["@constructor"] = { fg = theme.syntax.method }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
-        -- ["@constructor.builtin"] = {},
 
-        --- Keywords
+        ["@constructor"] = { fg = theme.syntax.method }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
+        ["@operator"] = { fg = theme.syntax.operator }, -- For any operator: `+`, but also `->` and `*` in C.
+
         ["@keyword"] = { fg = theme.syntax.keyword }, -- For keywords that don't fall in previous categories.
         -- ["@keyword.coroutine"] = {},
-        ["@keyword.conditional"] = { fg = theme.syntax.keyword_flow },
         -- ["@keyword.function"] = {},
         -- ["@keyword.operator"] = {},
-        ["@keyword.return"] = { fg = theme.syntax.keyword_flow },
-        -- ["@keyword.storage"] = {},
-        -- ["@keyword.directive"] = {},
-        ["@keyword.storage"] = { link = "StorageClass" },
+        -- ["@keyword.import"] = {},
+        -- ["@keyword.type"] = {},
+        -- ["@keyword.modifier"] = {},
         ["@keyword.repeat"] = { fg = theme.syntax.keyword_flow },
-        -- ["@debug"] = {},
-        ["@label"] = { link = "Label" }, -- For labels: `label:` in C and `:label:` in Lua.
-        ["@include"] = { link = "@keyword" },
-        -- ["@exception"] = {},
+        ["@keyword.return"] = { fg = theme.syntax.keyword_flow },
+        -- ["@keyword.debug"] = {},
+        -- ["@keyword.exception"] = {},
 
-        --- Types
-        ["@type"] = { link = "Type" },
-        ["@type.builtin"] = { fg = theme.syntax.type_builtin, bold = true },
-        -- ["@type.definition"] = {},
-        ["@type.qualifier"] = { link = "@keyword" },
+        ["@keyword.conditional"] = { fg = theme.syntax.keyword_flow },
+        -- ["@keyword.conditional.ternary"] = {},
 
-        ["@attribute"] = { link = "Function" },
-        ["@field"] = { fg = theme.syntax.field }, -- For fields.
-        ["@property"] = { link = "@field" },
-        ["@annotation"] = { link = "Function" },
+        -- ["@keyword.directive"] = {},
+        -- ["@keyword.directive.define"] = {},
 
-        --- Identifiers
-        ["@variable"] = { fg = theme.syntax.variable },        -- Any variable name that does not have another highlight.
-        ["@variable.builtin"] = { fg = theme.syntax.builtin }, -- Variable names that are defined by the languages, like `this` or `self`.
-        ["@parameter"] = { fg = theme.syntax.param },          -- For parameters of a function.
-        ["@variable.parameter"] = { link = "@parameter" },
-        -- ["@variable.parameter.builtin"] = {},
-        -- ["@constant"] = {},
-        ["@constant.builtin"] = { link = "@constant" },
-        -- ["@constant.macro"] = {},
+        ["@punctuation.delimiter"] = { fg = theme.syntax.delimiter }, -- For delimiters ie: `.`
+        ["@punctuation.bracket"] = { fg = theme.syntax.bracket },     -- For brackets and parens.
+        ["@punctuation.special"] = { fg = theme.syntax.special },     -- For special punctutation that does not fall in the catagories before.
 
-        ["@namespace"] = { fg = theme.syntax.namespace },
-        ["@module"] = { fg = theme.syntax.module },
-        ["@symbol"] = { fg = theme.syntax.func },
+        -- ["@comment"] = { link = "Comment" },
+        ["@comment.documentation"] = { fg = theme.syntax.comment_special },
 
-        --- Text
-        ["@text"] = { fg = theme.ui.fg },
-        ["@text.strong"] = { bold = true },
-        ["@text.emphasis"] = { italic = true },
-        ["@text.underline"] = { underline = true },
-        ["@text.strike"] = { strikethrough = true },
-        -- ["@text.title"] = {},
-        ["@text.title.1"] = { fg = theme.syntax.h1, bold = true },
-        ["@text.title.2"] = { fg = theme.syntax.h2, bold = true },
-        ["@text.title.3"] = { fg = theme.syntax.h3, bold = true },
-        ["@text.title.4"] = { fg = theme.syntax.h4, bold = true },
-        ["@text.title.5"] = { fg = theme.syntax.h5, bold = true },
-        ["@text.title.6"] = { fg = theme.syntax.h6, bold = true },
-        ["@text.quote"] = { fg = theme.syntax.string },
-        ["@text.uri"] = { fg = theme.syntax.link, underline = true },
-        ["@text.math"] = { fg = theme.syntax.number },
-        ["@text.environment"] = { fg = theme.ui.fg_accented },
-        ["@text.environment.name"] = { fg = theme.syntax.global },
-        ["@text.reference"] = { link = "Label" },
+        ["@comment.error"] = { fg = theme.diag.error.fg },
+        ["@comment.warning"] = { fg = theme.diag.warn.fg },
+        ["@comment.todo"] = { fg = theme.diag.ok.fg },
+        ["@comment.note"] = { fg = theme.diag.hint.fg },
 
-        ["@text.literal"] = { bg = theme.ui.bg_light, fg = theme.ui.fg_accented },
-        ["@text.literal.block"] = { link = "@text.literal" },
+        ["@markup.strong"] = { bold = true},
+        ["@markup.italic"] = { italic = true },
+        ["@markup.strikethrough"] = { strikethrough = true },
+        ["@markup.underline"] = { underline = true },
 
-        ["@text.todo.checked"] = { fg = theme.diag.ok.fg },
-        ["@text.todo.unchecked"] = { fg = theme.diag.warn.fg },
-        ["@text.note"] = { fg = theme.diag.hint.fg },
-        ["@text.warning"] = { fg = theme.diag.warn.fg },
-        ["@text.danger"] = { fg = theme.diag.error.fg },
-
-        ["@text.diff.add"] = { link = "DiffAdd" },
-        ["@text.diff.delete"] = { link = "DiffDelete" },
-
-        --- Markup
-        ["@markup"] = { fg = theme.ui.fg },
-        ["@markup.environment"] = { fg = theme.ui.fg_accented },
-        ["@markup.environment.name"] = { fg = theme.syntax.global },
         ["@markup.heading"] = { link = "Title" },
         ["@markup.heading.1"] = { fg = theme.syntax.h1, bold = true },
-        ["@markup.heading.1.marker"] = { link = "@markup.heading.1" },
         ["@markup.heading.2"] = { fg = theme.syntax.h2, bold = true },
-        ["@markup.heading.2.marker"] = { link = "@markup.heading.2" },
         ["@markup.heading.3"] = { fg = theme.syntax.h3, bold = true },
-        ["@markup.heading.3.marker"] = { link = "@markup.heading.3" },
         ["@markup.heading.4"] = { fg = theme.syntax.h4, bold = true },
-        ["@markup.heading.4.marker"] = { link = "@markup.heading.4" },
         ["@markup.heading.5"] = { fg = theme.syntax.h5, bold = true },
-        ["@markup.heading.5.marker"] = { link = "@markup.heading.5" },
         ["@markup.heading.6"] = { fg = theme.syntax.h6, bold = true },
-        ["@markup.heading.6.marker"] = { link = "@markup.heading.6" },
-        ["@markup.bold"] = { bold = true },
-        ["@markup.strong"] = { link = "@markup.bold" },
-        ["@markup.italic"] = { italic = true },
-        ["@markup.emphasis"] = { link = "@markup.italic" },
-        ["@markup.strikethrough"] = { strikethrough = true },
-        ["@markup.strike"] = { link = "@markup.strikethrough" },
-        ["@markup.underline"] = { underline = true },
+
+        ["@text.quote"] = { fg = theme.syntax.string },
+        ["@text.math"] = { fg = theme.syntax.number },
+
         ["@markup.link"] = { fg = theme.syntax.link, underline = true },
         ["@markup.link.label"] = { link = "SpecialChar" },
-        ["@markup.link.label.symbol"] = { link = "Identifier" },
         ["@markup.link.url"] = { link = "@markup.link" },
+
+        ["@markup.raw"] = { bg = theme.ui.bg_light, fg = theme.ui.fg_accented },
+        ["@markup.raw.block"] = { link = "@markup.raw" },
+
         ["@markup.list"] = { fg = theme.raw_faded.light_orange },
         ["@markup.list.checked"] = { fg = theme.raw_faded.light_green },
         ["@markup.list.unchecked"] = { fg = theme.raw_faded.yellow },
-        ["@markup.list.numbered"] = { link = "@markup.list" },
-        ["@markup.list.unnumbered"] = { link = "@markup.list" },
-        ["@markup.quote"] = { fg = theme.syntax.string },
-        ["@markup.raw"] = { bg = theme.ui.bg_light, fg = theme.ui.fg_accented },
-        ["@markup.raw.block"] = { link = "@markup.raw" },
-        ["@markup.raw.inline"] = { link = "@markup.raw" },
-        ["@markup.math"] = { fg = theme.syntax.number },
-
-        ["@comment.todo.checked"] = { fg = theme.diag.ok.fg },
-        ["@comment.todo.unchecked"] = { fg = theme.diag.warn.fg },
-        ["@comment.note"] = { fg = theme.diag.hint.fg },
-        ["@comment.warning"] = { fg = theme.diag.warn.fg },
-        ["@comment.danger"] = { fg = theme.diag.error.fg },
 
         ["@diff.plus"] = { link = "DiffAdd" },
         ["@diff.minus"] = { link = "DiffDelete" },
         ["@diff.delta"] = { link = "DiffChange" },
 
-        --- Tags
         ["@tag"] = { fg = theme.syntax.tag },
+        -- ["@tag.builtin"] = {},
         ["@tag.attribute"] = { fg = theme.syntax.attribute },
         ["@tag.delimiter"] = { fg = theme.syntax.delimiter },
+
 
         -- LSP Semantic Token Groups
         -- Reference: https://code.visualstudio.com/api/language-extensions/semantic-highlight-guide
@@ -341,15 +291,15 @@ function M.get_highlights(theme)
         ["@lsp.type.interface"] = { link = "@type" },
         ["@lsp.type.keyword"] = { link = "@keyword" },
         ["@lsp.type.label"] = { link = "@label" },
-        ["@lsp.type.lifetime"] = { link = "@storageclass" },
+        ["@lsp.type.lifetime"] = { link = "StorageClass" },
         ["@lsp.type.macro"] = { link = "Macro" },
-        ["@lsp.type.method"] = { link = "@method" },
-        ["@lsp.type.namespace"] = { link = "@namespace" },
+        ["@lsp.type.method"] = { link = "@function.method" },
+        ["@lsp.type.namespace"] = { fg = theme.syntax.namespace },
         ["@lsp.type.number"] = { link = "@number" },
         ["@lsp.type.operator"] = { link = "@operator" },
-        ["@lsp.type.parameter"] = { link = "@parameter" },
+        ["@lsp.type.parameter"] = { link = "@variable.parameter" },
         ["@lsp.type.property"] = { link = "@property" },
-        ["@lsp.type.regexp"] = { link = "@punctuation.special" },
+        ["@lsp.type.regexp"] = { link = "@string.regexp" },
         ["@lsp.type.selfKeyword"] = { link = "@variable.builtin" },
         ["@lsp.type.selfTypeKeyword"] = { link = "@variable.builtin" },
         ["@lsp.type.string"] = { link = "@string" },
