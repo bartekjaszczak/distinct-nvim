@@ -173,7 +173,7 @@ function M.get_highlights(theme)
 
         -- ["@string"] = {},
         ["@string.documentation"] = { fg = theme.fg_light_accent },
-        ["@string.regexp"] = { fg = theme.syntax.stringspecial },  -- For regexes.
+        ["@string.regexp"] = { fg = theme.syntax.stringspecial }, -- For regexes.
         ["@string.escape"] = { fg = theme.syntax.stringspecial }, -- For escape characters within a string.
         ["@string.special"] = { fg = theme.syntax.stringspecial },
         -- ["@string.special.symbol"] = {},
@@ -204,9 +204,9 @@ function M.get_highlights(theme)
         ["@function.method.call"] = {},
 
         ["@constructor"] = { fg = theme.syntax.method }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
-        ["@operator"] = { fg = theme.syntax.operator }, -- For any operator: `+`, but also `->` and `*` in C.
+        ["@operator"] = { fg = theme.syntax.operator },  -- For any operator: `+`, but also `->` and `*` in C.
 
-        ["@keyword"] = { fg = theme.syntax.keyword }, -- For keywords that don't fall in previous categories.
+        ["@keyword"] = { fg = theme.syntax.keyword },    -- For keywords that don't fall in previous categories.
         -- ["@keyword.coroutine"] = {},
         -- ["@keyword.function"] = {},
         -- ["@keyword.operator"] = {},
@@ -236,7 +236,7 @@ function M.get_highlights(theme)
         ["@comment.todo"] = { fg = theme.diag.ok.fg },
         ["@comment.note"] = { fg = theme.diag.hint.fg },
 
-        ["@markup.strong"] = { bold = true},
+        ["@markup.strong"] = { bold = true },
         ["@markup.italic"] = { italic = true },
         ["@markup.strikethrough"] = { strikethrough = true },
         ["@markup.underline"] = { underline = true },
@@ -256,7 +256,7 @@ function M.get_highlights(theme)
         ["@markup.link.label"] = { link = "SpecialChar" },
         ["@markup.link.url"] = { link = "@markup.link" },
 
-        ["@markup.raw"] = { bg = theme.ui.bg_light, fg = theme.ui.fg_accented },
+        ["@markup.raw"] = { fg = theme.ui.fg_accented },
         ["@markup.raw.block"] = { link = "@markup.raw" },
 
         ["@markup.list"] = { fg = theme.raw_faded.light_orange },
@@ -271,7 +271,6 @@ function M.get_highlights(theme)
         -- ["@tag.builtin"] = {},
         ["@tag.attribute"] = { fg = theme.syntax.attribute },
         ["@tag.delimiter"] = { fg = theme.syntax.delimiter },
-
 
         -- LSP Semantic Token Groups
         -- Reference: https://code.visualstudio.com/api/language-extensions/semantic-highlight-guide
