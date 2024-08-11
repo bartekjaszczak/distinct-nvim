@@ -392,6 +392,22 @@ function M.get_highlights(theme)
         UndotreeSavedSmall = { fg = theme.diag.warn.fg },
         UndotreeSeq = { fg = theme.ui.fg_accented },
         UndotreeTimeStamp = { fg = theme.ui.bg_very_light },
+
+        -- Render-markdown
+        RenderMarkdownH1 = { fg = theme.syntax.h1, bg = theme.ui.bg_dark },
+        RenderMarkdownH1Bg = { bg = theme.syntax.h1, fg = theme.ui.bg_dark },
+        RenderMarkdownH2 = { fg = theme.syntax.h2, bg = theme.ui.bg_dark },
+        RenderMarkdownH2Bg = { bg = theme.syntax.h2, fg = theme.ui.bg_dark },
+        RenderMarkdownH3 = { fg = theme.syntax.h3, bg = theme.ui.bg_dark },
+        RenderMarkdownH3Bg = { bg = theme.syntax.h3, fg = theme.ui.bg_dark },
+        RenderMarkdownH4 = { fg = theme.syntax.h4, bg = theme.ui.bg_dark },
+        RenderMarkdownH4Bg = { bg = theme.syntax.h4, fg = theme.ui.bg_dark },
+        RenderMarkdownH5 = { fg = theme.syntax.h5, bg = theme.ui.bg_dark },
+        RenderMarkdownH5Bg = { bg = theme.syntax.h5, fg = theme.ui.bg_dark },
+        RenderMarkdownH6 = { fg = theme.syntax.h6, bg = theme.ui.bg_dark },
+        RenderMarkdownH6Bg = { bg = theme.syntax.h6, fg = theme.ui.bg_dark },
+
+
     }
 end
 
